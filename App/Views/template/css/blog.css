@@ -1,0 +1,21 @@
+.posts{
+    margin: 110px auto 80px auto;
+    width: 1165px;
+    box-shadow: 0px 0px 10px 1px rgb(180,180,180);
+    background-color: rgb(255,255,255);
+}
+
+.post{
+	background-color:rgb(30,30,30);
+	border-top:2px solid rgb(20,116,194);
+	padding:20px 0px;
+    width: 100%;
+}
+
+.bt-post{
+    background-color: rgb(18,104,175);
+}
+
+.bt-post:hover{
+    background-color: rgb(20,116,194);
+}

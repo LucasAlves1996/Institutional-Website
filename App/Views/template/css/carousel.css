@@ -1,0 +1,88 @@
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-top: 0px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  width: 100%;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (min-width: 1920px) {
+  .carousel-item {
+    height: 650px;
+  }
+}
+
+@media (max-width: 1919px) {
+  .carousel-item {
+    height: 550px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .carousel-item {
+    height: 450px;
+  }
+}
+
+@media (max-width: 800px) {
+  .carousel-item {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-item {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    margin-top: 0px;
+  }
+}
