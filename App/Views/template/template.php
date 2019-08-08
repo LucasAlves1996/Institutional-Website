@@ -12,7 +12,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="App/Views/template/css/custom.css">
 <?php
-  if($this->view->dados['title']=="Início | MyFramework")
+  if($this->view->dados['title']=="Início | Souza e Souza")
   { ?>
     <link rel="stylesheet" href="App/Views/template/css/carousel.css">
     <link rel="stylesheet" href="App/Views/template/css/forms.css">

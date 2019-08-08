@@ -7,104 +7,115 @@ use MyFramework\Model\Container;
 
 class RoutesController extends Action
 {
+	private $siteName = "Souza e Souza";
+
     public function inicio()
     {
         $this->view->dados = [
-            'title' => 'Início | MyFramework'    
+            'title' => 'Início | '.$this->siteName    
         ];
 
-        $this->render('inicio');
+        $this->render('inicio', true);
     }
 
     public function sobre()
     {
         $this->view->dados = [
-            'title' => 'Sobre | MyFramework'    
+            'title' => 'Sobre | '.$this->siteName    
         ];
 
-        $this->render('sobre');
+        $this->render('sobre', true);
     }
 
     public function assessoria()
     {
         $this->view->dados = [
-            'title' => 'Assessoria | MyFramework'    
+            'title' => 'Assessoria | '.$this->siteName    
         ];
 
-        $this->render('assessoria');
+        $this->render('assessoria', true);
     }
 
     public function consultoria()
     {
         $this->view->dados = [
-            'title' => 'Consultoria | MyFramework'    
+            'title' => 'Consultoria | '.$this->siteName    
         ];
 
-        $this->render('consultoria');
+        $this->render('consultoria', true);
     }
 
     public function contabil()
     {
         $this->view->dados = [
-            'title' => 'Contábil | MyFramework'    
+            'title' => 'Contábil | '.$this->siteName    
         ];
 
-        $this->render('contabil');
+        $this->render('contabil', true);
     }
 
     public function fiscal()
     {
         $this->view->dados = [
-            'title' => 'Fiscal | MyFramework'    
+            'title' => 'Fiscal | '.$this->siteName    
         ];
 
-        $this->render('fiscal');
+        $this->render('fiscal', true);
     }
 
     public function departamento_pessoal()
     {
         $this->view->dados = [
-            'title' => 'Departamento pessoal | MyFramework'    
+            'title' => 'Departamento pessoal | '.$this->siteName    
         ];
 
-        $this->render('departamento-pessoal');
+        $this->render('departamento-pessoal', true);
     }
 
     public function outsourcing()
     {
         $this->view->dados = [
-            'title' => 'Outsourcing | MyFramework'    
+            'title' => 'Outsourcing | '.$this->siteName    
         ];
 
-        $this->render('outsourcing');
+        $this->render('outsourcing', true);
     }
 
     public function contato()
     {
         $this->view->dados = [
-            'title' => 'Contato | MyFramework'    
+            'title' => 'Contato | '.$this->siteName    
         ];
 
-        $this->render('contato');
+        $this->render('contato', true);
     }
 
     public function blog()
     {
         $this->view->dados = [
-            'title' => 'Blog | MyFramework'    
+            'title' => 'Blog | '.$this->siteName    
         ];
 
-        $this->render('blog');
+        $this->render('blog', true);
+    }
+
+    public function admin()
+    {
+        $this->view->dados = [
+            'title' => 'Admin | '.$this->siteName
+        ];
+
+        $this->render('login', false);
     }
 
     public function error($error)
     {
         $this->view->dados = [
-            'title' => '404 | MyFramework',
+            'title' => '404 | '.$this->siteName,
             'error' => $error
         ];
 
-        $this->render('error');
+        $this->render('error', true);
     }
 }
 

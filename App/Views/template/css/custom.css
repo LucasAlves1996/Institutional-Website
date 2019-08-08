@@ -136,27 +136,27 @@ button{
 }
 
 #assessoria{
-    background-image: url(../imgs/assessoria.png); 
+    background-image: url(../files/imgs/assessoria.png); 
 }
 
 #consultoria{
-    background-image: url(../imgs/consultoria.png); 
+    background-image: url(../files/imgs/consultoria.png); 
 }
 
 #contabil{
-    background-image: url(../imgs/contabil.png); 
+    background-image: url(../files/imgs/contabil.png); 
 }
 
 #fiscal{
-    background-image: url(../imgs/fiscal.png); 
+    background-image: url(../files/imgs/fiscal.png); 
 }
 
 #departamentoPessoal{
-    background-image: url(../imgs/departamento_pessoal.png); 
+    background-image: url(../files/imgs/departamento_pessoal.png); 
 }
 
 #outsourcing{
-    background-image: url(../imgs/outsourcing.png); 
+    background-image: url(../files/imgs/outsourcing.png); 
 }
 
 #bt-blog{
@@ -172,7 +172,7 @@ button{
 }
 
 #bt-blog:hover{
-    background-color: rgb(50,50,50);
+    background-color: rgb(8,87,154);
 }
 
 @media(max-width: 1220px) {

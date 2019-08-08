@@ -68,6 +68,12 @@ class Route extends AppLaunch
             'action' => 'blog'
         );
 
+        $routes['admin'] = array(
+            'path' => '/admin',
+            'controller' => 'RoutesController',
+            'action' => 'admin'
+        );
+
         $this->setRoutes($routes);
     }
 }

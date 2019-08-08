@@ -11,10 +11,17 @@ abstract class Action
         $this->view = new \stdClass();
     }
 
-    protected function render($view)
+    protected function render($view, $template)
     {
-        $this->view->content = $view;
-        require_once "App/Views/template/template.php";
+        if($template == true)
+        {
+            $this->view->content = $view;
+            require_once "App/Views/template/template.php";
+        }
+        else{
+            $this->view->content = $view;
+            $this->content();
+        }
     }
 
     protected function content()
