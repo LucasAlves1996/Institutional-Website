@@ -6,11 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="App/Views/template/files/imgs/favicon.ico">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700%7COpen%20Sans%3A400%2C300%7CMontserrat%3Aregular%2C700&subset=" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="App/Views/template/css/custom.css">
 <?php
   if($this->view->dados['title']=="Início | Souza e Souza")
   { ?>
@@ -18,7 +13,17 @@
     <link rel="stylesheet" href="App/Views/template/css/forms.css">
 <?php
   }
-?>
+  else if($this->view->dados['title']=="Blog | Souza e Souza")
+  { ?>
+    <link rel="stylesheet" href="App/Views/template/css/forms.css">
+    <link rel="stylesheet" href="App/Views/template/css/blog.css">
+<?php
+  } ?>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A400%2C700%7COpen%20Sans%3A400%2C300%7CMontserrat%3Aregular%2C700&subset=" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="App/Views/template/css/custom.css">
   </head>
   <body>
     <header>
@@ -76,5 +81,15 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<?php
+  if($this->view->dados['title']=="Blog | Souza e Souza")
+  { ?>
+    <script>
+        jQuery(function($) {
+            $('body').css('background-color','rgb(230,230,230)');
+        });
+    </script>
+<?php
+  } ?>
   </body>
 </html>

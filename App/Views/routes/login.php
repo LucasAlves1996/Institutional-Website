@@ -12,12 +12,18 @@
     <link rel="icon" href="App/Views/template/files/imgs/favicon.ico">
 </head>
 <body>
+    <?php if($this->view->login == 'erro'){ ?>
+    <div class="alert alert-danger" style="text-align:center;width:250px;
+    margin:100px auto -100px auto;">
+        Credenciais inválidas!
+    </div>
+    <?php } ?>
     <div id="formLogin">
         <div class="logo2">
             <img src="App/Views/template/files/imgs/logo2.png" id="logo2">
         </div>
         <div id="form">
-            <form method="POST">
+            <form method="POST" action="/auth">
                 <label>Usuário:</label><br>
                 <input type="email" name="email" class="form-fields" placeholder="Digite o seu email" required><br>
                 <label>Senha:</label><br>

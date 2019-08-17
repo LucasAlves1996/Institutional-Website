@@ -1,20 +1,8 @@
-@extends('templates.template')
-
-@section('title')
-    Blog
-@endsection
-
-@section('imports')
-    <link rel="stylesheet" href="css/forms.css">
-    <link rel="stylesheet" href="css/blog.css">
-@endsection
-
 @section('content')
     <div class="posts">
         @if (Auth::check())
             <div class="nav post">
                 <form method="POST" style="margin:auto;">
-                    @csrf
                     <input class="form-fields" style="padding:6px 0px 6px 6px;margin:0px 0px 10px 0px;width: 60%;" id="title" name="title" type="text" value="" size="30" maxlength="255" placeholder="Título" required>
                     <textarea class="form-fields" style="height:80px;padding:3px 0px 3px 6px;margin:0px 0px 10px 0px;" id="content" name="content" cols="45" rows="5" maxlength="65525" placeholder="Escreva aqui o comentário..." required="required"></textarea><br>
                     <input type="submit" class="bt-style bt-form bt-post" name="postar" id="postar" value="Postar" title="Postar">
@@ -50,12 +38,4 @@
             </div>
         @endforeach
     </div>
-@endsection
-
-@section('scripts')
-    <script>
-        jQuery(function($) {
-            $('body').css('background-color','rgb(230,230,230)');
-        });
-    </script>
 @endsection

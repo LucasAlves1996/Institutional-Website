@@ -99,11 +99,13 @@ class RoutesController extends Action
         $this->render('blog', true);
     }
 
-    public function admin()
+    public function login()
     {
         $this->view->dados = [
-            'title' => 'Admin | '.$this->siteName
+            'title' => 'Login | '.$this->siteName
         ];
+
+        $this->view->login = isset($_GET['login']) ? $_GET['login'] : '';
 
         $this->render('login', false);
     }

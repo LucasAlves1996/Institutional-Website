@@ -8,15 +8,15 @@ class Connection
     {
         try
         {
-            $conn = new PDO(
-                "mysql:host=localhost;dbname=myframework;charset=utf8",
+            $conn = new \PDO(
+                "mysql:host=localhost;dbname=souzaesouza;charset=utf8",
                 "root",
                 ""
             );
 
             return $conn;
         }
-        catch(PDOException $e)
+        catch(\PDOException $e)
         {
             
         }
