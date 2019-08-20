@@ -14,7 +14,7 @@
 <body>
     <?php if($this->view->login == 'erro'){ ?>
     <div class="alert alert-danger" style="text-align:center;width:250px;
-    margin:100px auto -100px auto;">
+    margin:75px auto -124px auto;">
         Credenciais inválidas!
     </div>
     <?php } ?>

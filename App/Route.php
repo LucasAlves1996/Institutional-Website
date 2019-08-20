@@ -80,6 +80,18 @@ class Route extends AppLaunch
             'action' => 'auth'
         );
 
+        $routes['logout'] = array(
+            'path' => '/logout',
+            'controller' => 'RoutesController',
+            'action' => 'logout'
+        );
+
+        $routes['create-post'] = array(
+            'path' => '/create-post',
+            'controller' => 'PostController',
+            'action' => 'create'
+        );
+
         $this->setRoutes($routes);
     }
 }

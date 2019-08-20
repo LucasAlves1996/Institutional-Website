@@ -18,6 +18,14 @@ class AuthController extends Action
 
         if($user->__get('id'))
         {
+            $logged_user = [
+                'id' => $user->__get('id'),
+                'name' => $user->__get('name'),
+                'email' => $user->__get('email')
+            ];
+
+            $_SESSION['user'] = $logged_user;
+            
             header("Location: /");
         }
         else

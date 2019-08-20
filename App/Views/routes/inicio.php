@@ -1,4 +1,9 @@
   <div id="carouselId" class="carousel slide" data-ride="carousel">
+<?php if(isset($_SESSION['user'])){ ?>
+    <span id="bt-config-slider" style="position:absolute;top:30px;right:40px;z-index:1;cursor:pointer;">
+      <i class="fas fa-cog fa-3x"></i>
+    </span>
+<?php } ?>
     <ol class="carousel-indicators">
       <li data-target="#carouselId" data-slide-to="0" class="active"></li>
       <li data-target="#carouselId" data-slide-to="1"></li>
@@ -102,26 +107,12 @@
     <hr style="margin:10px auto 50px auto;border-width:2px;width:200px;border-color:rgb(240,240,240)">
 
     <div id="noticias">
+      <?php foreach (array_slice($this->view->dados['posts'], 0, 3) as $post){ ?>
       <div style="text-align:center;">
-        <div style="width:300px;height:260px;background-color:rgb(50, 50, 50);margin:auto;">
-
-        </div>
-        <h2>Notícia 1</h2>
+        <div style="width:300px;height:260px;background-color:rgb(50, 50, 50);margin:auto;"></div>
+        <h2><?= $post['title'] ?></h2>
       </div>
-
-      <div style="text-align:center;">
-        <div style="width:300px;height:260px;background-color:rgb(50, 50, 50);margin:auto;">
-
-        </div>
-        <h2>Notícia 2</h2>
-      </div>
-
-      <div style="text-align:center;">
-        <div style="width:300px;height:260px;background-color:rgb(50, 50, 50);margin:auto;">
-
-        </div>
-        <h2>Notícia 3</h2>
-      </div>
+      <?php } ?>
     </div>
 
     <div style="width:35%;margin:120px auto 0px auto;">

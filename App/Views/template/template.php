@@ -25,7 +25,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="App/Views/template/css/custom.css">
   </head>
-  <body>
+  <body <?php if(isset($_SESSION['user'])){ ?>style="margin-bottom:46px;"<?php } ?>>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="nav">
         <div id="divLogo">
@@ -68,19 +68,34 @@
     </section>
     
     <footer>
-        <div style="background-color:#2d3034;">
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        </div>
-        <div style="background-color:#212326;color:rgb(200,200,200);">
-          <h5 style="width:100%;text-align:center;margin:0;padding:23px 0px 20px 0px;">
-            Desenvolvido por <a href="https://www.lucasdeveloper.com.br/" style="outline:none;">Lucas Costa Alves</a>
-          </h5>
-        </div>
+      <div style="background-color:#2d3034;">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </div>
+      <div style="background-color:#212326;color:rgb(200,200,200);">
+        <h5 style="width:100%;text-align:center;margin:0;padding:23px 0px 20px 0px;">
+          Desenvolvido por <a href="https://www.lucasdeveloper.com.br/" style="outline:none;">Lucas Costa Alves</a>
+        </h5>
+      </div>
     </footer>
-
+<?php if(isset($_SESSION['user'])){ ?>
+    <div class="nav fixed-bottom" style="background-color:rgb(30,30,30);box-shadow:0px 0px 0px 2px rgb(20,116,194);padding:3px 0px;">
+      <li class="nav-item dropup" style="right:calc(-100% + 95px);">
+        <a id="bt-menu-user" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+          <?= $_SESSION['user']['name'] ?> <span class="caret"></span>
+        </a>
+    
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="right:calc(-100% + 95px);">
+          <a class="nav-link" href="logout" id="submenu-item" style="background-color: rgb(10, 80, 180) !important;color: rgb(220, 220, 220) !important;font-family: Montserrat;font-size: 16px;margin-right:-5px;">
+            Logout
+          </a>
+        </div>
+      </li>
+    </div>
+<?php } ?>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/53353b47dd.js"></script>
 <?php
   if($this->view->dados['title']=="Blog | Souza e Souza")
   { ?>

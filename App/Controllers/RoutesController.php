@@ -11,8 +11,11 @@ class RoutesController extends Action
 
     public function inicio()
     {
+        $posts = PostController::read();
+
         $this->view->dados = [
-            'title' => 'Início | '.$this->siteName    
+            'title' => 'Início | '.$this->siteName,
+            'posts' => $posts
         ];
 
         $this->render('inicio', true);
@@ -21,7 +24,7 @@ class RoutesController extends Action
     public function sobre()
     {
         $this->view->dados = [
-            'title' => 'Sobre | '.$this->siteName    
+            'title' => 'Sobre | '.$this->siteName
         ];
 
         $this->render('sobre', true);
@@ -30,7 +33,7 @@ class RoutesController extends Action
     public function assessoria()
     {
         $this->view->dados = [
-            'title' => 'Assessoria | '.$this->siteName    
+            'title' => 'Assessoria | '.$this->siteName
         ];
 
         $this->render('assessoria', true);
@@ -39,7 +42,7 @@ class RoutesController extends Action
     public function consultoria()
     {
         $this->view->dados = [
-            'title' => 'Consultoria | '.$this->siteName    
+            'title' => 'Consultoria | '.$this->siteName
         ];
 
         $this->render('consultoria', true);
@@ -48,7 +51,7 @@ class RoutesController extends Action
     public function contabil()
     {
         $this->view->dados = [
-            'title' => 'Contábil | '.$this->siteName    
+            'title' => 'Contábil | '.$this->siteName
         ];
 
         $this->render('contabil', true);
@@ -57,7 +60,7 @@ class RoutesController extends Action
     public function fiscal()
     {
         $this->view->dados = [
-            'title' => 'Fiscal | '.$this->siteName    
+            'title' => 'Fiscal | '.$this->siteName
         ];
 
         $this->render('fiscal', true);
@@ -66,7 +69,7 @@ class RoutesController extends Action
     public function departamento_pessoal()
     {
         $this->view->dados = [
-            'title' => 'Departamento pessoal | '.$this->siteName    
+            'title' => 'Departamento pessoal | '.$this->siteName
         ];
 
         $this->render('departamento-pessoal', true);
@@ -75,7 +78,7 @@ class RoutesController extends Action
     public function outsourcing()
     {
         $this->view->dados = [
-            'title' => 'Outsourcing | '.$this->siteName    
+            'title' => 'Outsourcing | '.$this->siteName
         ];
 
         $this->render('outsourcing', true);
@@ -84,7 +87,7 @@ class RoutesController extends Action
     public function contato()
     {
         $this->view->dados = [
-            'title' => 'Contato | '.$this->siteName    
+            'title' => 'Contato | '.$this->siteName
         ];
 
         $this->render('contato', true);
@@ -92,8 +95,11 @@ class RoutesController extends Action
 
     public function blog()
     {
+        $posts = PostController::read();
+
         $this->view->dados = [
-            'title' => 'Blog | '.$this->siteName    
+            'title' => 'Blog | '.$this->siteName,
+            'posts' => $posts
         ];
 
         $this->render('blog', true);
@@ -101,6 +107,9 @@ class RoutesController extends Action
 
     public function login()
     {
+        if(isset($_SESSION['user']))
+            header('Location: /');
+
         $this->view->dados = [
             'title' => 'Login | '.$this->siteName
         ];
@@ -108,6 +117,13 @@ class RoutesController extends Action
         $this->view->login = isset($_GET['login']) ? $_GET['login'] : '';
 
         $this->render('login', false);
+    }
+
+    public function logout()
+    {
+        session_destroy();
+
+        header('Location: /');
     }
 
     public function error($error)
