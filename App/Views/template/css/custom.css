@@ -414,7 +414,6 @@ iframe{
     }
 }
 
-<<<<<<< HEAD
 @media(max-width:705px){
     iframe{
         width: 100% !important;
@@ -434,8 +433,6 @@ iframe{
     }
 }
 
-=======
->>>>>>> 9f33f8a7fcc17a516ecbcf55b09885b0815bb67e
 @media(min-width: 481px){
     body{
         padding: 88px 0px 0px 0px;

@@ -2,7 +2,6 @@
 	background-color:rgb(30,30,30);
 	border-top:2px solid rgb(20,116,194);
 	padding:20px 0px;
-<<<<<<< HEAD
     margin: 20px auto -18px auto !important;
 }
 
@@ -10,10 +9,6 @@
     margin: 20px auto 80px auto;
     box-shadow: 0px 0px 10px 1px rgb(180,180,180);
     background-color: rgb(255,255,255);
-=======
-    width: 70%;
-    margin: 20px auto -18px auto !important;
->>>>>>> 9f33f8a7fcc17a516ecbcf55b09885b0815bb67e
 }
 
 .bt-post{
@@ -26,38 +21,22 @@
 
 @media(min-width:992px){
     .posts{
-<<<<<<< HEAD
         padding: 0px 10%;
         width: 70%; 
     }
 
     .post{
         width: 70%;
-=======
-        margin: 20px auto 80px auto;
-        padding: 0px 10%;
-        width: 70%;
-        box-shadow: 0px 0px 10px 1px rgb(180,180,180);
-        background-color: rgb(255,255,255);
->>>>>>> 9f33f8a7fcc17a516ecbcf55b09885b0815bb67e
     }
 }
 
 @media(max-width:991px){
     .posts{
-<<<<<<< HEAD
         padding: 0px 5%;
         width: 95%;
     }
 
     .post{
         width: 95%;
-=======
-        margin: 20px auto 80px auto;
-        padding: 0px 5%;
-        width: 95%;
-        box-shadow: 0px 0px 10px 1px rgb(180,180,180);
-        background-color: rgb(255,255,255);
->>>>>>> 9f33f8a7fcc17a516ecbcf55b09885b0815bb67e
     }
 }
