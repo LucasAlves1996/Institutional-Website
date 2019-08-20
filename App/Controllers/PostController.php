@@ -20,11 +20,7 @@ class PostController extends Action
         header('Location: /blog');
     }
 
-<<<<<<< HEAD
     public static function read()
-=======
-    public function read()
->>>>>>> 9f33f8a7fcc17a516ecbcf55b09885b0815bb67e
     {
         $posts = Container::getModel('Post');
 
