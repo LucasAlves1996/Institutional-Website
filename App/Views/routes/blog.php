@@ -1,10 +1,20 @@
 <?php if(isset($_SESSION['user'])){ ?>
     <div class="nav post">
+<<<<<<< HEAD
+        <div style="width:80%;margin:auto;">
+            <form method="POST" action="create-post" style="margin:auto;">
+                <input class="form-fields" style="padding:6px 0px 6px 6px;margin:0px 0px 10px 0px;width: 60%;" id="title" name="title" type="text" value="" size="30" maxlength="255" placeholder="Título" required>
+                <textarea class="form-fields" style="height:80px;padding:3px 0px 3px 6px;margin:0px 0px 10px 0px;" id="content" name="content" cols="45" rows="5" maxlength="65525" placeholder="Escreva aqui o comentário..." required="required"></textarea><br>
+                <input type="submit" class="bt-style bt-form bt-post" name="postar" id="postar" value="Postar" title="Postar">
+            </form>
+        </div>
+=======
         <form method="POST" action="create-post" style="margin:auto;">
             <input class="form-fields" style="padding:6px 0px 6px 6px;margin:0px 0px 10px 0px;width: 60%;" id="title" name="title" type="text" value="" size="30" maxlength="255" placeholder="Título" required>
             <textarea class="form-fields" style="height:80px;padding:3px 0px 3px 6px;margin:0px 0px 10px 0px;" id="content" name="content" cols="45" rows="5" maxlength="65525" placeholder="Escreva aqui o comentário..." required="required"></textarea><br>
             <input type="submit" class="bt-style bt-form bt-post" name="postar" id="postar" value="Postar" title="Postar">
         </form>
+>>>>>>> 9f33f8a7fcc17a516ecbcf55b09885b0815bb67e
     </div>
 <?php } ?>
     <div class="posts">

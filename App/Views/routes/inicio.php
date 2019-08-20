@@ -115,7 +115,7 @@
       <?php } ?>
     </div>
 
-    <div style="width:35%;margin:120px auto 0px auto;">
+    <div id="div-bt-blog">
       <button id="bt-blog" onclick="window.location.href = 'blog';">Ir para o blog</button>
     </div>
   </div>
@@ -124,7 +124,7 @@
     <h1 style="width:100%;text-align:center;font-family:Montserrat;padding:50px 0px 40px 0px;font-size:30px;margin:0;letter-spacing:2px;line-height:36px;">Se tiver alguma dúvida</h1>
     <h2 style="width:100%;text-align:center;font-family:Montserrat;padding:0;font-size:26px;font-weight:bold;margin:0;letter-spacing:2px;line-height:36px;">CONTATE-NOS POR E-MAIL</h2>
     <hr style="margin:10px auto 50px auto;border-width:2px;width:200px;border-color:rgb(20,116,194)">
-    <div style="width:45%;margin:auto;">
+    <div id="form-contact">
       <form action="#" class="form-contact" method="post" tabindex="1">
         <input type="text" class="form-fields" name="nome" placeholder="Nome" required />
         <input type="email" class="form-fields" name="email" placeholder="Email" required />
