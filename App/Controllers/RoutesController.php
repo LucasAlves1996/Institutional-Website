@@ -13,9 +13,12 @@ class RoutesController extends Action
     {
         $posts = PostController::read();
 
+        $slideShow = SlideShowController::read();
+
         $this->view->dados = [
             'title' => 'Início | '.$this->siteName,
-            'posts' => $posts
+            'posts' => $posts,
+            'slideShow' => $slideShow
         ];
 
         $this->render('inicio', true);

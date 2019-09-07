@@ -92,6 +92,12 @@ class Route extends AppLaunch
             'action' => 'create'
         );
 
+        $routes['slide-show-update'] = array(
+            'path' => '/slide-show-update',
+            'controller' => 'SlideShowController',
+            'action' => 'update'
+        );
+
         $this->setRoutes($routes);
     }
 }
